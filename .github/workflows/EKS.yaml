@@ -2,11 +2,11 @@ name: "01-EKS"
 on:
     push:
         branches:
-            - feature
+            - feature-branch
 
 jobs:
   Plan:
-    uses: anishkasaxena/DevOps_project/.github/workflows/tf_plan.yaml@feature
+    uses: anishkasaxena/DevOps_project/.github/workflows/tf_plan.yaml@feature-branch
     
     with:
       gh_environment: dev
@@ -15,7 +15,7 @@ jobs:
 
   Apply:
     needs: Plan
-    uses: anishkasaxena/DevOps_project/.github/workflows/tf_apply.yaml@feature
+    uses: anishkasaxena/DevOps_project/.github/workflows/tf_apply.yaml@feature-branch
     with:
       gh_environment: dev
     secrets:
