@@ -6,7 +6,7 @@ on:
 
 jobs:
   Plan:
-    uses: anishkasaxena/DevOpsProject/.github/workflows/tf_plan.yaml@feature
+    uses: anishkasaxena/DevOps_project/.github/workflows/tf_plan.yaml@feature
     
     with:
       gh_environment: dev
@@ -15,7 +15,7 @@ jobs:
 
   Apply:
     needs: Plan
-    uses: anishkasaxena/DevOpsProject/.github/workflows/tf_apply.yaml@feature
+    uses: anishkasaxena/DevOps_project/.github/workflows/tf_apply.yaml@feature
     with:
       gh_environment: dev
     secrets:
