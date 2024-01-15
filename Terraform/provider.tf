@@ -11,7 +11,7 @@ terraform {
     organization = "Devsecops-org"
 
     workspaces {
-      name = "Devsecops-org"
+      name = "terraform-github-actions"
     }
   }
 }
