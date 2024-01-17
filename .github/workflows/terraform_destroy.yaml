@@ -4,11 +4,11 @@ on:
 
 jobs:
   Destroy:
-    uses: anishkasaxena/DevOps_project/.github/workflows/tf_plan.yaml@feature-branch
+    uses: anishkasaxena/DevOps_project/.github/workflows/tf_plan.yaml@feature0.2
     
     with:
       gh_environment: dev
     secrets:
       cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
       run: |
-        terraform destroy
+        terraform destroy --auto-approve
