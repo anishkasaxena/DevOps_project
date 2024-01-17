@@ -1,0 +1,14 @@
+name: "Terraform Destroy"
+on:
+    workflow_dispatch: 
+
+jobs:
+  Destroy:
+    uses: anishkasaxena/DevOps_project/.github/workflows/tf_plan.yaml@feature-branch
+    
+    with:
+      gh_environment: dev
+    secrets:
+      cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+      run: |
+        terraform destroy
